@@ -1,0 +1,301 @@
+.standard_container {
+  /* align-items: center; */
+  width: 95%;
+  height: 90vh;
+  margin: 0 auto 1%;
+}
+
+.standard_container .standard_wrap{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  height: 100%;
+}
+
+.standard_container > h1{
+  text-align: left;
+  margin-top: 5%;
+}
+
+/* 공통 */
+/* 제목 헤더 스타일 */
+.standard_container .head-title {
+  font-size: calc(10px + 1vmin);
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: black;
+  text-align: left;
+}
+
+/*=====기준정보 관리 -- 왼쪽 =====*/
+.category-wrapper {
+  width: 21vw;
+  /* width: 30%; */
+  /* margin: 0.5rem; */
+}
+
+.category-box {
+  background-color: #fff;
+  /* border: 1px solid #ccc; */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding:1.5rem;
+  height: 90%;
+  /* margin-bottom: 20px; */
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 코드 검색박스 */
+.searchBox {
+  width: 100%;
+  margin-bottom: 7%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#searchValue {
+  padding: 3%;
+  font-size: calc(5px + 1vmin);
+  border: 1px solid #D9D9D9;
+  border-radius: 4px;
+  width: 12vw;
+}
+
+.searchBtn {
+  width: 4rem;
+  font-size: calc(7px + 1vmin);
+  cursor: pointer;
+  border: none;
+  background: #394ecd;
+  color: #fff;
+  border-radius: 4px;
+  padding: 1%;
+}
+
+/* 코드그룹 추가, 삭제 */
+.addColumn {
+  background-color: #EFF7FA;
+  padding: 1rem 0.5rem 0.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.addColumn input{
+  border-radius: 4px;
+  border: 1px solid #D9D9D9;
+  width: 90%;
+  margin-bottom: 3%;
+}
+
+.addColumn .addBtnWrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.CodeGruopImg{
+  margin: 7px;
+  height: 28px;
+  /* font-size: 16px; */
+  cursor: pointer;
+}
+.CodeGroupButton {
+  width: 80px;
+  margin: 7px;
+  height: 35px;
+  font-size: 16px;
+  margin-top: 7px;
+  cursor: pointer;
+  background: #394ecd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.CodeGroupButton:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.category-box hr{
+  margin: 0.2rem 0;
+  border: none;
+  height: 1px;
+  background-color: #d9d9d9;
+}
+
+/* 코드 그룹 리스트  */
+.category-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.category-table thead .head-title{
+  padding-bottom: 5%;
+}
+.category-table tbody{
+  cursor: pointer;
+}
+.category-table td {
+  padding: 4%;
+  text-align: left;
+}
+
+.category-table tbody tr {
+  /* transition: background-color 0.3s ease-in-out; */
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.category-table tbody tr.selected {
+  background-color: #EFF7FA;
+  /* border-radius: 24px; */
+  color: #07D9F6;
+  font-weight: bold;
+}
+
+/*===== 상세내용 -- 오른쪽 ===== */
+.detail-wrapper {
+  margin: 0 0.5rem;
+  width: 90%;
+  height: 90%;
+}
+.detail-box {
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding: 1.5rem;
+  height: 90%;
+  overflow: auto;
+}
+.detail-box .detailTitleBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail-box .detailTitleBox img{
+  height: 24px;
+}
+
+/* 표 스타일 */
+.detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+.detail-table thead{
+}
+
+.detail-table th,
+.detail-table td {
+  padding: 8px;
+  text-align: center;
+}
+
+.detail-table th {
+  background-color: #EEF0F3;
+  color: #797676;
+  
+}
+.detail-table th:first-child {
+  /* border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px; */
+  border-radius: 8px 0 0 8px;
+}
+.detail-table th:last-child {
+  /* border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px; */
+  border-radius: 0 8px 8px 0;
+}
+.detail-table  tr{
+  /* background-color: #EEF0F3; */
+  /* border-radius: 8px; */
+} 
+.detail-table  tr td {
+  /* background-color: #EEF0F3; */
+  color: black;
+  border: none;
+  
+}
+
+.detail-table td:nth-child(-n+5) {
+  width: 120px;
+}
+
+
+
+/* 설명 텍스트 스타일 */
+.description {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.description2 li {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 200px;
+}
+
+
+
+/* 수정, 저장 버튼 스타일 */
+.AddRemove2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnEditTable {
+  width: 100px;
+  height: 35px;
+  font-size: 16px;
+  margin: 7px;
+  cursor: pointer;
+  background-color: #ABB6C5;
+  color: white;
+  border: none;
+  border-radius: 20px;
+}
+
+.btnEditTable:hover {
+  /* background-color: #0056b3; */
+  background-color: #07D9F6;
+  color: #fff;
+}
+
+.delRowBtn:hover {
+  background-color: #2c2c2c;
+  color: tomato;
+  font-weight: bold;
+}
+
+.delRowBtn {
+  /* background-color: #2c2c2c; */
+  /* background-color: #ABB6C5; */
+  background-color: #ABB6C5;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid #ABB6C5;
+  /* border: 1px solid #2c2c2c; */
+  /* border: none; */
+  cursor: pointer;
+}
+
+/* .addBtn {
+  width: 60px;
+  height: 30px;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 24px;
+  background-color: #ABB6C5;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.addBtn:hover {
+  color: #0056b3;
+} */

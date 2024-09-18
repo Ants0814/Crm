@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Member</title>
+</head>
+<body>
+    <h1>Insert Member</h1>
+    <form id="insertMemberForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" value="John Doe"><br><br>
+        
+        <label for="site_name">Site Name:</label><br>
+        <input type="text" id="site_name" name="site_name" value="Main Site"><br><br>
+        
+        <label for="birth_date">Birth Date:</label><br>
+        <input type="date" id="birth_date" name="birth_date" value="1990-01-01"><br><br>
+        
+        <label for="mobile_phone">Mobile Phone:</label><br>
+        <input type="text" id="mobile_phone" name="mobile_phone" value="010-1234-5678"><br><br>
+        
+        <label for="registration_date">Registration Date:</label><br>
+        <input type="date" id="registration_date" name="registration_date" value="2023-01-01"><br><br>
+        
+        <label for="grade">Grade:</label><br>
+        <input type="text" id="grade" name="grade" value="A"><br><br>
+        
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" value="123 Main St"><br><br>
+        
+        <label for="detailed_address">Detailed Address:</label><br>
+        <input type="text" id="detailed_address" name="detailed_address" value="Apt 456"><br><br>
+        
+        <label for="withdrawal_date">Withdrawal Date:</label><br>
+        <input type="date" id="withdrawal_date" name="withdrawal_date"><br><br>
+        
+        <label for="retained_points">Retained Points:</label><br>
+        <input type="number" id="retained_points" name="retained_points" value="1000"><br><br>
+        
+        <label for="dealer_stop">Dealer Stop:</label><br>
+        <input type="checkbox" id="dealer_stop" name="dealer_stop"><br><br>
+        
+        <label for="user_id">User ID:</label><br>
+        <input type="text" id="user_id" name="user_id" value="user123"><br><br>
+        
+        <label for="nickname">Nickname:</label><br>
+        <input type="text" id="nickname" name="nickname" value="johnny"><br><br>
+        
+        <label for="sex">Sex:</label><br>
+        <input type="text" id="sex" name="sex" value="M"><br><br>
+        
+        <label for="real_name">Real Name:</label><br>
+        <input type="text" id="real_name" name="real_name" value="John Doe"><br><br>
+        
+        <label for="auth_mobile_phone">Auth Mobile Phone:</label><br>
+        <input type="text" id="auth_mobile_phone" name="auth_mobile_phone" value="010-1234-5678"><br><br>
+        
+        <label for="real_name_email">Real Name Email:</label><br>
+        <input type="email" id="real_name_email" name="real_name_email" value="john.doe@example.com"><br><br>
+        
+        <label for="email_confirmed">Email Confirmed:</label><br>
+        <input type="checkbox" id="email_confirmed" name="email_confirmed" checked><br><br>
+        
+        <label for="di">DI:</label><br>
+        <input type="text" id="di" name="di" value="DI1234567890"><br><br>
+        
+        <label for="phone">Phone:</label><br>
+        <input type="text" id="phone" name="phone" value="010-1234-5678"><br><br>
+        
+        <label for="parent_user_id">Parent User ID:</label><br>
+        <input type="text" id="parent_user_id" name="parent_user_id" value="parent123"><br><br>
+        
+        <label for="user_key">User Key:</label><br>
+        <input type="text" id="user_key" name="user_key" value="key123"><br><br>
+        
+        <label for="os">OS:</label><br>
+        <input type="text" id="os" name="os" value="iOS"><br><br>
+        
+        <label for="push_key">Push Key:</label><br>
+        <input type="text" id="push_key" name="push_key" value="pushkey123"><br><br>
+        
+        <label for="consultation_content">Consultation Content:</label><br>
+        <input type="text" id="consultation_content" name="consultation_content" value="Content here"><br><br>
+        
+        <label for="partner_code">Partner Code:</label><br>
+        <input type="text" id="partner_code" name="partner_code" value="partner123"><br><br>
+        
+        <label for="member_grade">Member Grade:</label><br>
+        <input type="text" id="member_grade" name="member_grade" value="Gold"><br><br>
+        
+        <label for="purchase_grade">Purchase Grade:</label><br>
+        <input type="text" id="purchase_grade" name="purchase_grade" value="Silver"><br><br>
+        
+        <label for="franchise_name">Franchise Name:</label><br>
+        <input type="text" id="franchise_name" name="franchise_name" value="FranchiseX"><br><br>
+        
+        <label for="recommender_code">Recommender Code:</label><br>
+        <input type="text" id="recommender_code" name="recommender_code" value="recommender123"><br><br>
+        
+        <label for="profile_picture">Profile Picture:</label><br>
+        <input type="text" id="profile_picture" name="profile_picture" value="profile_pic_url"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('insertMemberForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = {};
+            formData.forEach((value, key) => {
+                if (key === 'dealer_stop' || key === 'email_confirmed') {
+                    data[key] = value === 'on'; // Convert checkbox values to boolean
+                } else {
+                    data[key] = value;
+                }
+            });
+            
+            fetch('http://crm.skynet.re.kr/request/insert_member', {
+                credentials:'include',
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                alert('Member inserted successfully!');
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Error inserting member.');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+
+/* 게시글 스타일링 */
+.post {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.post-id, .post-title, .post-user {
+  color: #a9a9a9;
+  margin-right: 10px;
+}
+
+.post-content, .post-file {
+  margin-bottom: 15px;
+}
+
+/* 댓글 섹션 스타일링 */
+.post-footer {
+  background-color: #242424;
+  padding: 10px;
+  border-top: 1px solid #444;
+  border-radius: 0 0 8px 8px;
+}
+
+.comment-section input {
+  width: 70%;
+  padding: 8px;
+  margin-right: 10px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+}
+
+.comment-section button {
+  padding: 8px 15px;
+  background-color: #4a90e2; /* 세련된 파란색 */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comment-section button:hover {
+  background-color: #3178c6;
+}
+
+.comments .comment {
+  background-color: #2d2d2d;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  border: 1px solid #3a3a3a;
+}

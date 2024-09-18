@@ -1,0 +1,20 @@
+{
+  "name": "appservice",
+  "version": "1.0.0",
+  "description": "antswebtemplate",
+  "main": "execute",
+  "scripts": {
+    "test": "execute dev"
+  },
+  "author": "antsnest",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express-session": "^1.18.0",
+    "lodash": "^4.17.21",
+    "mysql": "^2.18.1",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.11.3",
+    "pg-format": "^1.0.4"
+  }
+}

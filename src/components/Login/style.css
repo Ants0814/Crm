@@ -1,0 +1,265 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* 전체 화면 높이 */
+  }
+  
+.form-box {
+    position: relative;
+    width: 420px;
+    height: 850px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-box h2 {
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .input-register {
+    position: relative;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+    margin: 20px 0;
+  }
+  
+  .input-register input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 20px 0 5px;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .input-register input::placeholder {
+    color: #fff;
+  }
+  
+  i {
+    position: absolute;
+    right: 0;
+    top: 13px;
+    color: #fff;
+  }
+  
+  .registerBtn {
+    width: 100%;
+    height: 50px;
+    background: dodgerblue;
+    border-radius: 5px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+    border: none;
+    outline: none;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin: 20px 0px;
+  }
+  
+  .group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .group span a {
+    position: relative;
+    top: 10px;
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  .group a:focus {
+    text-decoration: underline;
+  }
+  
+  #result {
+    margin-bottom: 30px;
+    position: relative;
+    top: 25px;
+    color: rgb(41, 166, 224);
+    font-weight: 600;
+  }
+  
+  .popup {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%) scale(0);
+    width: 400px;
+    height: 330px;
+    background: #fff;
+    border-radius: 6px;
+    padding: 0 30px 30px;
+    color: #000;
+    text-align: center;
+    transition: transform 0.4s, top 0.4s;
+  }
+  
+  .popup ion-icon {
+    font-size: 50px;
+    color: #00ff00;
+    padding-top: 45px;
+  }
+  
+  .popup button {
+    width: 100%;
+    background: #00ff00;
+    border-radius: 4px;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    margin-top: 50px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #777;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .popup a {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  
+  .open-slide {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .login-box {
+    flex-direction: column;
+    position: relative;
+    width: 420px;
+    height: 500px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-box h2 {
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+  }
+  
+
+  .input-login {
+    position: relative;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+    margin: 15px 0;
+  }
+ .input-login input:hover,
+ .input-login input:focus {
+  background-color: transparent; /* 원하는 배경색상으로 변경 */
+}
+  .input-login input {
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 20px 0 5px;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .input-login input::placeholder {
+    color: #fff;
+  }
+  .loginIdInput {
+    border: none;
+  }
+
+  .loginBtn {
+    width: 20rem;
+    height: 50px;
+    background: dodgerblue;
+    border-radius: 5px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+    border: none;
+    outline: none;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin: 20px 0px;
+  }
+
+  .forgetSec {
+    display: flex;
+  }
+
+  .forgetSec a {
+    font-size: 12px;
+    margin: 0px 30px;
+
+  }
+
+  .input-register-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* 필요에 따라 간격 조절 */
+    width: 20rem;
+
+  }
+  
+  .input-register-radio {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .input-register select {
+    align-items: center;
+    width: 100%; /* 전체 너비 사용 */
+    padding: 8px 10px; /* 패딩 조정 */
+    border: 1px solid #dddddd59; /* 테두리 설정 */
+    border-radius: 4px; /* 둥근 모서리 */
+    background-color: transparent; /* 배경색 투명 */
+    -webkit-appearance: none; /* 기본 디자인 제거 */
+    -moz-appearance: none; /* 기본 디자인 제거 */
+    appearance: none; /* 기본 디자인 제거 */
+    font-size: 16px; /* 폰트 크기 */
+    color: #979797; /* 글자색 */
+    text-align: center;
+  }
+  
+  .input-register select:focus {
+    outline: none; /* 포커스 시 아웃라인 제거 */
+    border-color: #2969c9; /* 포커스 시 테두리 색상 변경 */
+  }
+  
+
+  
+  .input-register::after {
+    position: absolute; /* 절대 위치 설정 */
+    right: 10px; /* 오른쪽에서 10px */
+    top: 100%; /* 상단에서 50% */
+    transform: translateY(-50%); /* Y축으로 -50% 이동하여 중앙 정렬 */
+    pointer-events: none; /* 클릭 이벤트 무시 */
+    color: #333; /* 화살표 색상 */
+  }
+
+  .registerLink {
+    color: #fff;
+    text-decoration: none;
+  }

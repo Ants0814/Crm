@@ -1,0 +1,91 @@
+.my-page-container {
+
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 20px;
+    background-color: #3b3b3b;
+    box-shadow: 0 2px 4px rgba(216, 216, 216, 0.1);
+    border-radius: 8px;
+    color: #ffffff;
+  }
+  
+  .my-page-container h2 {
+    text-align: left;
+    color: #ffffff;
+    margin: 17px;
+  }
+  
+  .my-page-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 1rem;
+  }
+  
+
+  
+  .my-page-container td {
+    padding: 13px;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: bold;
+    
+  }
+  
+  .my-page-container input[type="text"], input[type="email"], select {
+    width: 90%;
+    padding: 8px;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .my-page-container input[type="radio"] {
+    margin-right: 15px;
+  }
+  
+  .my-page-container label {
+    margin-right: 10px;
+  }
+  .my-page-container .saveBtn, .modifyBtn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .my-page-container button {
+    background-color: #54bacc;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .my-page-container button:hover {
+    background-color: rgb(255, 255, 255) ;
+    color: #3b3b3b;
+  }
+  
+  .edit-mode td {
+    background-color: #3b3b3b;
+  }
+
+  .my-page-container td:first-child {
+    width: 25%;
+  }
+  .my-page-container td:last-child {
+    width: 100%;
+  }
+
+  .my-page-container .rightLine {
+    border-left: 1px solid #ffffff; 
+    margin-right: 2rem;
+  }
+
+.selectGender {
+    border: 1px solid #3b3b3b;
+}

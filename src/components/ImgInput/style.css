@@ -1,0 +1,58 @@
+.image-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    max-width: 1400px;
+}
+
+.input-file {
+    display: none;
+}
+
+.upload-label {
+    background-color: #8f8f8f;
+    color: white;
+    cursor: pointer;
+    margin :0.5rem ; 
+    border-radius: 0.7rem;
+    font-size: 4.5rem;
+
+}
+
+.imgLoader {
+   position: relative;
+   background-color:#fff ;
+   margin :0.5rem ; 
+   border-radius: 0.7rem;
+   display:flex;
+   justify-content:center ;
+   align-items:center ;
+   cursor :grabbing ; 
+
+}
+.imgLoader img{
+    border-radius: 0.7rem;
+     max-width :100% ; /* 이미지가 부모 요소를 벗어나지 않도록 설정 */
+     max-height :100% ; 
+}
+
+.upload-label:hover {
+    background-color: #dddddd;
+    color: #000;
+}
+
+.imgLoader:hover {
+    cursor: grabbing; 
+}
+
+.delBtn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: none;
+    background-color: transparent ;
+    font-weight: bold;
+    color: #1b1b1b8c;
+    font-size: 1rem;
+}

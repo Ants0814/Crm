@@ -1,0 +1,49 @@
+.menu{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+/* 왼쪽 로고 */
+.leftLogo img{
+    height: 60%;
+    width: 16rem;
+}
+
+@media (max-width: 768px) {
+    /* 태블릿과 모바일 화면에 대한 스타일 */
+    .leftLogo img {
+        width: 12rem; /* 화면이 작을 때 이미지 크기 줄임 */
+    }
+}
+
+/* 오른쪽 메뉴 */
+.rightNav{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    padding-inline-start: 0;
+    align-items: center;
+}
+
+.rightNav li {
+    list-style: none;
+    font-size: 1.15rem;
+    transition: transform 0.3s ease-in-out; /* 부드러운 트랜지션 효과 */
+}
+
+.rightNav li a{
+    text-decoration: none;
+    color: white;
+    padding: 0.5em 0; /* 클릭 영역 확장 */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* 부드러운 색상 및 텍스트 쉐도우 변경 */
+}
+
+.rightNav li a:hover, .rightNav li a:focus {
+    color: #6bb8ff; /* 호버 시 금색으로 변경 */
+    text-shadow: 1px 1px 2px black; /* 텍스트에 그림자 효과 추가 */
+    font-weight: 900;
+}
